@@ -7,12 +7,6 @@ const User = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    //Fetch
-    // fetch('https://reqres.in/api/users')
-    //   .then(res => res.json())
-    //   .then(json => setUsers(json.data));
-    //Axios
-    //https://jsonplaceholder.typicode.com/users
    Axios.get('https://jsonplaceholder.typicode.com/users').then(res =>
      setUsers(res.data),
     );
@@ -29,7 +23,10 @@ const User = () => {
             name ={item.name}
             username={item.username}
             email={item.email}
-            address={ item.address.city}
+            adressSuite= {item.address.suite}
+            adressStreet= {item.address.street}
+            addressCity={item.address.city}
+            adressZipCode= {item.address.zipcode}
             phone= {item.phone}
           />
         ))}
@@ -51,18 +48,5 @@ const styles = StyleSheet.create({
     fontSize: 36,
     fontWeight: '700',
   }, 
-  name: {
-    fontSize: 18,
-    fontWeight: '700',
-  },
-  email: {
-    fontSize: 16,
-    color: 'grey',
-    marginTop: 10,
-  },
-  image: {
-    height: 150,
-    width: 150,
-    marginTop: 10,
-  },
+  
 });
