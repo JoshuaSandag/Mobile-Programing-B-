@@ -39,13 +39,13 @@ const Registrasi = () => {
             <Gap height={40} />
             <TextInput label="Name" placeholder="Masukan nama lengkap anda" value ={UserName} onChangeText ={(e)=>setUserName(e)}/>
             <Gap height={24} />
-            <TextInput label="Username" placeholder="Masukan nama lengkap anda" value ={Pasword} onChangeText ={(e)=>setPasword(e)} secureTextEntry ={true}/>
+            <TextInput label="Username" placeholder="Masukan username anda" value ={Pasword} onChangeText ={(e)=>setPasword(e)} secureTextEntry ={true}/>
             <Gap height={48} />
-            <TextInput label="Email" placeholder="Masukan nama lengkap anda" value ={Pasword} onChangeText ={(e)=>setPasword(e)} secureTextEntry ={true}/>
+            <TextInput label="Email" placeholder="Masukan email anda" value ={Pasword} onChangeText ={(e)=>setPasword(e)} secureTextEntry ={true}/>
             <Gap height={48} />
-            <TextInput label="Address" placeholder="Masukan nama lengkap anda" value ={Pasword} onChangeText ={(e)=>setPasword(e)} secureTextEntry ={true}/>
+            <TextInput label="Address" placeholder="Masukan alamat anda" value ={Pasword} onChangeText ={(e)=>setPasword(e)} secureTextEntry ={true}/>
             <Gap height={48} />
-            <TextInput label="Phone Number" placeholder="Masukan nama lengkap anda" value ={Pasword} onChangeText ={(e)=>setPasword(e)} secureTextEntry ={true}/>
+            <TextInput label="Phone Number" placeholder="Masukan nomor hp anda" value ={Pasword} onChangeText ={(e)=>setPasword(e)} secureTextEntry ={true}/>
             <Gap height={48} />
             <Button  label="Register" onsubmit ={()=> handleSubmit()} />
             </View>
