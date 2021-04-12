@@ -4,28 +4,36 @@ import TextInput from './text';
 import Button from './button'
 import Gap from './gap';
 
-const Registrasi = () => {
+const App = () => {
 
-  const [welcome, setWelcome] = useState('welcomme')
-  const [UserName, setUserName] = useState('')
-  const [Pasword, setPasword] = useState('')
+  const [welcome, setWelcome] = useState('Registration')
+
+  const [Name, setName] = useState()
+  const [UserName, setUserName] = useState()
+  const [Email, setEmail] = useState()
+  const [Address, setAddres] = useState()
+  const [NumberPhone, setNumberPhone] = useState()
 
   useEffect(() => {
   console.log('component did mount')
   }, []);
 
   useEffect(() => {
-    console.log('componen did update')
+    //console.log('componen did update')
 
   }, [welcome])
 
 
   const handleSubmit =()=>{
-    setWelcome('selamat datang');
+   // setWelcome('selamat datang');
 
     const data ={
-      UserName: UserName,
-      password: Pasword,
+      name: Name,
+      username : UserName,
+      email : Email,
+      addres : Address,
+      numberphone : NumberPhone
+      
     }
     console.log(data)
   }
@@ -36,17 +44,17 @@ const Registrasi = () => {
 
             <View style={styles.container}>
             <Text style={styles.title}>{welcome}</Text>
-            <Gap height={40} />
-            <TextInput label="Name" placeholder="Masukan nama lengkap anda" value ={UserName} onChangeText ={(e)=>setUserName(e)}/>
             <Gap height={24} />
-            <TextInput label="Username" placeholder="Masukan username anda" value ={Pasword} onChangeText ={(e)=>setPasword(e)} secureTextEntry ={true}/>
-            <Gap height={48} />
-            <TextInput label="Email" placeholder="Masukan email anda" value ={Pasword} onChangeText ={(e)=>setPasword(e)} secureTextEntry ={true}/>
-            <Gap height={48} />
-            <TextInput label="Address" placeholder="Masukan alamat anda" value ={Pasword} onChangeText ={(e)=>setPasword(e)} secureTextEntry ={true}/>
-            <Gap height={48} />
-            <TextInput label="Phone Number" placeholder="Masukan nomor hp anda" value ={Pasword} onChangeText ={(e)=>setPasword(e)} secureTextEntry ={true}/>
-            <Gap height={48} />
+            <TextInput label="Name" placeholder="Masukan nama lengkap anda" value ={UserName} onChangeText ={(e)=>setName(e)}/>
+            <Gap height={24} />
+            <TextInput label="Username" placeholder="Masukan username anda" value ={Pasword} onChangeText ={(e)=>setUserName(e)}/>
+            <Gap height={24} />
+            <TextInput label="Email" placeholder="Masukan email anda" value ={Pasword} onChangeText ={(e)=>setEmail(e)}/>
+            <Gap height={24} />
+            <TextInput label="Address" placeholder="Masukan alamat anda" value ={Pasword} onChangeText ={(e)=>setAddres(e)}/>
+            <Gap height={24} />
+            <TextInput label="Phone Number" placeholder="Masukan nomor hp anda" value ={Pasword} onChangeText ={(e)=>setNumberPhone(e)} />
+            <Gap height={24} />
             <Button  label="Register" onsubmit ={()=> handleSubmit()} />
             </View>
       </ScrollView>
@@ -78,4 +86,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default Registrasi;
+export default App;

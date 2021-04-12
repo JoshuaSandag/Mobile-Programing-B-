@@ -1,12 +1,12 @@
 import React from 'react'
 import {StyleSheet, View} from 'react-native'
-import Homescreen from './pages/user/index'
+import Userlist from './pages/user/index'
 import Registrasi from './pages/regist/index'
 
 const app = () => {
     return (
         <View>
-            <Homescreen/>
+            <Userlist/>
             <Registrasi/>
         </View>
     )

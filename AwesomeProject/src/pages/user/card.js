@@ -5,10 +5,10 @@ const Card = ({name, username, email, address, phone}) => {
   return (
     <View style={styles.card}>
       <Text style={styles.name}>{name}</Text>
-      <Text style={styles.User}>{username}</Text>
+      <Text style={styles.username}>{username}</Text>
       <Text style={styles.email}>{email}</Text>
-      <Text style={styles.email}>{address}</Text>
-      <Text style={styles.email}>{phone}</Text>
+      <Text style={styles.address}>{address}</Text>
+      <Text style={styles.phone}>{phone}</Text>
     </View>
   );
 };
@@ -18,7 +18,7 @@ export default Card;
 const styles = StyleSheet.create({
   card: {
     marginTop: 15,
-    alignItems: 'center',
+  // alignItems: 'center',
     borderWidth: 1,
     borderColor: 'grey',
     borderRadius: 10,
@@ -26,14 +26,14 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     marginTop: 5,
     marginTop: 15,
-    alignItems: 'center',
+   // alignItems: 'center',
   },
   name: {
     fontSize: 18,
     fontWeight: '700',
   },
   email: {
-    fontSize: 16,
+    fontSize: 18,
     color: 'grey',
     marginTop: 10,
   },
